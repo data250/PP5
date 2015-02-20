@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # you can read more about security in the related section of the documentation
 # http://symfony.com/doc/current/book/security.html
 security:
@@ -51,17 +50,3 @@ security:
     # http://symfony.com/doc/current/cookbook/security/access_control.html
     access_control:
         #- { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY, requires_channel: https }
-=======
-security:
-    providers:
-        in_memory:
-            memory: ~
-
-    firewalls:
-        dev:
-            pattern: ^/(_(profiler|wdt|error)|css|images|js)/
-            security: false
-
-        default:
-            anonymous: ~
->>>>>>> 2051e73fe41b414fd3ae3aad814d3a2c51cc9c2e
