@@ -18,6 +18,10 @@ if (isset($_SERVER['HTTP_CLIENT_IP'])
     exit('You are not allowed to access this file. Check '.basename(__FILE__).' for more information.');
 }
 */
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2051e73fe41b414fd3ae3aad814d3a2c51cc9c2e
 $loader = require_once __DIR__.'/../app/bootstrap.php.cache';
 Debug::enable();
 

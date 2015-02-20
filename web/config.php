@@ -10,8 +10,14 @@ if (!in_array(@$_SERVER['REMOTE_ADDR'], array(
 ))) {
     header('HTTP/1.0 403 Forbidden');
     exit('This script is only accessible from localhost.');
+<<<<<<< HEAD
 }
 */
+=======
+} 
+*/
+
+>>>>>>> 2051e73fe41b414fd3ae3aad814d3a2c51cc9c2e
 require_once dirname(__FILE__).'/../app/SymfonyRequirements.php';
 
 $symfonyRequirements = new SymfonyRequirements();

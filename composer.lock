@@ -4,7 +4,11 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
+<<<<<<< HEAD
     "hash": "b9d5a410f0c71fa7dff4f9dd38b0ae77",
+=======
+    "hash": "44526f16f4abfd18c8a026236c003aa8",
+>>>>>>> 2051e73fe41b414fd3ae3aad814d3a2c51cc9c2e
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -292,6 +296,7 @@
         },
         {
             "name": "doctrine/dbal",
+<<<<<<< HEAD
             "version": "v2.5.1",
             "source": {
                 "type": "git",
@@ -311,10 +316,32 @@
             "require-dev": {
                 "phpunit/phpunit": "4.*",
                 "symfony/console": "2.*"
+=======
+            "version": "v2.4.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/dbal.git",
+                "reference": "a370e5b95e509a7809d11f3d280acfc9310d464b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/a370e5b95e509a7809d11f3d280acfc9310d464b",
+                "reference": "a370e5b95e509a7809d11f3d280acfc9310d464b",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/common": "~2.4",
+                "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*",
+                "symfony/console": "~2.0"
+>>>>>>> 2051e73fe41b414fd3ae3aad814d3a2c51cc9c2e
             },
             "suggest": {
                 "symfony/console": "For helpful console commands such as SQL execution and import of files."
             },
+<<<<<<< HEAD
             "bin": [
                 "bin/doctrine-dbal"
             ],
@@ -324,6 +351,9 @@
                     "dev-master": "2.5.x-dev"
                 }
             },
+=======
+            "type": "library",
+>>>>>>> 2051e73fe41b414fd3ae3aad814d3a2c51cc9c2e
             "autoload": {
                 "psr-0": {
                     "Doctrine\\DBAL\\": "lib/"
@@ -359,7 +389,11 @@
                 "persistence",
                 "queryobject"
             ],
+<<<<<<< HEAD
             "time": "2015-01-12 21:52:47"
+=======
+            "time": "2015-01-12 21:57:01"
+>>>>>>> 2051e73fe41b414fd3ae3aad814d3a2c51cc9c2e
         },
         {
             "name": "doctrine/doctrine-bundle",
@@ -1392,6 +1426,7 @@
         },
         {
             "name": "symfony/symfony",
+<<<<<<< HEAD
             "version": "2.6.x-dev",
             "source": {
                 "type": "git",
@@ -1402,6 +1437,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/symfony/zipball/9e7b10915b696ca0ee8e4123d861d62da7dfb56b",
                 "reference": "9e7b10915b696ca0ee8e4123d861d62da7dfb56b",
+=======
+            "version": "v2.6.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/symfony.git",
+                "reference": "23b647f1e4eeb24a457d3c47f5f5046377d5a3bf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/23b647f1e4eeb24a457d3c47f5f5046377d5a3bf",
+                "reference": "23b647f1e4eeb24a457d3c47f5f5046377d5a3bf",
+>>>>>>> 2051e73fe41b414fd3ae3aad814d3a2c51cc9c2e
                 "shasum": ""
             },
             "require": {
@@ -1504,7 +1551,11 @@
             "keywords": [
                 "framework"
             ],
+<<<<<<< HEAD
             "time": "2015-02-17 20:47:41"
+=======
+            "time": "2015-02-02 18:02:30"
+>>>>>>> 2051e73fe41b414fd3ae3aad814d3a2c51cc9c2e
         },
         {
             "name": "twig/extensions",
@@ -1668,11 +1719,16 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
+<<<<<<< HEAD
     "stability-flags": {
         "symfony/symfony": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
+=======
+    "stability-flags": [],
+    "prefer-stable": false,
+>>>>>>> 2051e73fe41b414fd3ae3aad814d3a2c51cc9c2e
     "platform": {
         "php": ">=5.3.3"
     },
