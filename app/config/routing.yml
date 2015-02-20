@@ -1,0 +1,4 @@
+pdjd_shop:
+    resource: "@pdjdShopBundle/Resources/config/routing.yml"
+    prefix:   /
+

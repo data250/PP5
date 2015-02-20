@@ -1,0 +1,7 @@
+pdjd_shop_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: pdjdShopBundle:Default:index }
+
+pdjd_shop_welcome:
+    pattern:  /
+    defaults: { _controller: pdjdShopBundle:Default:index }
