@@ -1,7 +1,12 @@
+
+{% extends 'default/index.html.twig' %}
+{% block body %}
+
+<div class="lista">
 {% if movies | length == 0 %}
-    <p>
+
         Brak filmów. B³¹d
-    </p>
+
 {% else %}
 	<table border="1">
     {% for movie in movies %}
@@ -28,3 +33,5 @@
     {% endfor %}
 	</table>
 {% endif %}
+</div>
+{% endblock body%}

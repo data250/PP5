@@ -1,5 +1,32 @@
-{% extends 'base.html.twig' %}
+{% block menu %}
+<head>
+	<style type="text/css">
+		body{ font-size:18px; color:#000000; }
+		a { color:#000000}
+		.menu { border:solid 1px #2d2d2d;  text-align:center; background:#575757; padding:100px 20px 100px auto;  -moz-border-radius: 5px;  -webkit-border-radius: 5px; border-radius: 5px;}
 
-{% block body %}
-    Homepage.
-{% endblock %}
+/* =Your Generated css 
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+.menu{background-color: rgba(67,  20,  238,  0.6);background: rgba(67,  20,  238,  0.6);color: rgba(67,  20,  238,  0.6);}
+/* End of Your Generated css 
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+</style>
+		</head>
+<div class="menu">
+
+{% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                {{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }} |
+                <a href="{{ path('fos_user_security_logout') }}">
+                    {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
+                </a>
+            {% else %}
+                {{ render(controller('FOSUserBundle:Security:login')) }} <a  href=" {{path('fos_user_registration_register')}}">Rejestracja</a>
+            {% endif %} 
+	  <a href="{{path('list')}}">lista</a> | 
+ <a href="{{path('popularne')}}">Popularne</a>
+
+          
+
+</div>
+{% endblock menu %}
+{% block body %}{% endblock %}

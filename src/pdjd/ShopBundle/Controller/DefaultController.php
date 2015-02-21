@@ -24,11 +24,30 @@ class DefaultController extends Controller
     }
 	
 	/**
+     * @Route("/gatunek/{genre}", name="gatunek")
+     */
+    public function genreAction($genre)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $sql = "
+            SELECT *
+			FROM Movie
+			WHERE genre = '$genre';
+        ";
+        $stmt = $em->getConnection()->prepare($sql);
+        $movies = $stmt->execute();
+        $movies = $stmt->fetchAll();
+        return $this->render('pdjdShopBundle:Default:movie_list.html.twig',
+            array('movies' => $movies)
+       );
+    }
+	
+	/**
      * @Route("/list", name="list")
      */
 	public function listAction()
 	{
-		 $em = $this->getDoctrine()->getManager();
+		$em = $this->getDoctrine()->getManager();
         $sql = '
             SELECT Movie.id, Movie.name, Movie.cover, Movie.description, Movie.actorsList, Movie.genre, Movie.ordersCount
             FROM Movie;
@@ -40,4 +59,26 @@ class DefaultController extends Controller
             array('movies' => $movies)
        );
 	}
+	
+	/**
+     * @Route("/popularne", name="popularne")
+     */
+	public function popularAction()
+	{
+		$em = $this->getDoctrine()->getManager();
+        $sql = '
+            SELECT * 
+			FROM Movie 
+			ORDER BY ordersCount DESC LIMIT 10;
+        ';
+        $stmt = $em->getConnection()->prepare($sql);
+        $movies = $stmt->execute();
+        $movies = $stmt->fetchAll();
+        return $this->render('pdjdShopBundle:Default:movie_list.html.twig',
+            array('movies' => $movies)
+       );
+	}
+	
+	
 }
+
