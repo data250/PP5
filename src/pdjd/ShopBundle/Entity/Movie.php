@@ -48,6 +48,20 @@ class Movie
      * @ORM\Column(name="actorsList", type="string", length=255)
      */
     private $actorsList;
+	
+	/**
+     * @var string
+     *
+     * @ORM\Column(name="genre", type="string", length=100)
+     */
+    private $genre;
+	
+	/**
+     * @var integer
+     *
+     * @ORM\Column(name="ordersCount", type="integer")
+     */
+    private $ordersCount;
 
 
     /**
@@ -150,5 +164,51 @@ class Movie
     public function getActorsList()
     {
         return $this->actorsList;
+    }
+	
+	/**
+     * Set genre
+     *
+     * @param string $genre
+     * @return Movie
+     */
+    public function setGenre($genre)
+    {
+        $this->genre = $genre;
+
+        return $this;
+    }
+
+    /**
+     * Get genre
+     *
+     * @return string 
+     */
+    public function getGenre()
+    {
+        return $this->genre;
+    }
+	
+	/**
+     * Set ordersCount
+     *
+     * @param string $ordersCount
+     * @return Movie
+     */
+    public function setOrdersCount($ordersCount)
+    {
+        $this->ordersCount = $ordersCount;
+
+        return $this;
+    }
+
+    /**
+     * Get ordersCount
+     *
+     * @return integer 
+     */
+    public function getOrdersCount()
+    {
+        return $this->ordersCount;
     }
 }

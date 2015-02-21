@@ -18,6 +18,14 @@ class AdminController extends Controller {
             ->add('description', 'text')
             ->add('cover', 'text')
             ->add('actorsList', 'text')
+			->add('genre', 'choice', array(
+					'choices'   => array(
+						'komedia' => 'komedia', 
+						'dramat' => 'dramat'
+					),
+					'required'  => false,
+					'placeholder' => 'wybierz gatunek'))
+			->add('ordersCount', 'integer')
             ->add('save', 'submit', array('label' => 'Dodaj'))
             ->getForm();
         $form->handleRequest($request);

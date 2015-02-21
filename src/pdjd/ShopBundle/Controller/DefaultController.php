@@ -30,7 +30,7 @@ class DefaultController extends Controller
 	{
 		 $em = $this->getDoctrine()->getManager();
         $sql = '
-            SELECT Movie.id, Movie.name, Movie.cover, Movie.description, Movie.actorsList
+            SELECT Movie.id, Movie.name, Movie.cover, Movie.description, Movie.actorsList, Movie.genre, Movie.ordersCount
             FROM Movie;
         ';
         $stmt = $em->getConnection()->prepare($sql);
