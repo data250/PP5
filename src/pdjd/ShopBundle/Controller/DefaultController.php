@@ -24,9 +24,17 @@ class DefaultController extends Controller
     }
 	
 	/**
-     * @Route("/gatunek/{genre}", name="gatunek")
+     * @Route("/gatunek", name="gatunek")
      */
-    public function genreAction($genre)
+    public function genreAction()
+    {
+        return $this->render('pdjdShopBundle:Default:genre.html.twig');
+    }
+	
+	/**
+     * @Route("/gatunek/{genre}", name="gatunek2")
+     */
+    public function genre2Action($genre)
     {
         $em = $this->getDoctrine()->getManager();
         $sql = "

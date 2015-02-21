@@ -21,7 +21,18 @@ class AdminController extends Controller {
 			->add('genre', 'choice', array(
 					'choices'   => array(
 						'komedia' => 'komedia', 
-						'dramat' => 'dramat'
+						'dramat' => 'dramat',
+						'sci-fi' => 'sci-fi',
+						'musical' => 'musical',
+						'horror' => 'horror',
+						'animowane' => 'animowane',
+						'familijne' => 'familijne',
+						'przygodowe' => 'przygodowe',
+						'kryminał' => 'kryminał',
+						'western' => 'western',
+						'fantasy' => 'fantasy'
+						
+						
 					),
 					'required'  => false,
 					'placeholder' => 'wybierz gatunek'))
