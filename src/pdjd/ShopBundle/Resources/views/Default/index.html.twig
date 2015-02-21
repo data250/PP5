@@ -1,4 +1,4 @@
-{% extends 'base.html.twig' %}
+
 
 {% block body %}
 {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
@@ -14,3 +14,6 @@
 
           
 {% endblock %}
+
+  <a href="{{path('list')}}">lista</a>
+	

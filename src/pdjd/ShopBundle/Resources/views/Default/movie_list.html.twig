@@ -1,0 +1,24 @@
+{% if movies | length == 0 %}
+    <p>
+        Nie mo¿na wyœwietliæ ¿adnych filmów.
+    </p>
+{% else %}
+	<table>
+    {% for movie in movies %}
+        <tr>
+			<td>
+			    <a style="color:inherit" href="blank">{{ movie.name }}</a>
+			</td>
+			<td>
+				<a href="tttt"><img class="img-shadow" src="{{ movie.cover }}" style="width: 50%"  onerror="this.style.display='none'"/></a>
+			</td>
+			<td>
+				{{ movie.description }}
+			</td>
+			<td>
+				{{ movie.actorsList }}
+			</td>
+		</tr>
+    {% endfor %}
+	</table>
+{% endif %}

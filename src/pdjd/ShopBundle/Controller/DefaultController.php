@@ -22,4 +22,22 @@ class DefaultController extends Controller
     {
         return $this->render('pdjdShopBundle:Default:index.html.twig');
     }
+	
+	/**
+     * @Route("/list", name="list")
+     */
+	public function listAction()
+	{
+		 $em = $this->getDoctrine()->getManager();
+        $sql = '
+            SELECT Movie.id, Movie.name, Movie.cover, Movie.description, Movie.actorsList
+            FROM Movie;
+        ';
+        $stmt = $em->getConnection()->prepare($sql);
+        $movies = $stmt->execute();
+        $movies = $stmt->fetchAll();
+        return $this->render('pdjdShopBundle:Default:movie_list.html.twig',
+            array('movies' => $movies)
+       );
+	}
 }
