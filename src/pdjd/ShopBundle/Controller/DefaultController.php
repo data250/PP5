@@ -24,6 +24,34 @@ class DefaultController extends Controller
     }
 	
 	/**
+     * @Route("/film/{id2}", name="film2")
+     */
+    public function film2Action($id2)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $sql = "
+            SELECT *
+			FROM Movie
+			WHERE id = '$id2';
+        ";
+        $stmt = $em->getConnection()->prepare($sql);
+        $movies = $stmt->execute();
+        $movies = $stmt->fetchAll();
+        return $this->render('pdjdShopBundle:Default:film.html.twig',
+            array('movies' => $movies)
+       );
+    }
+	
+	/**
+     * @Route("/film", name="film")
+     */
+    public function filmAction()
+    {
+        return $this->render('pdjdShopBundle:Default:film.html.twig');
+    }
+	
+	
+	/**
      * @Route("/gatunek", name="gatunek")
      */
     public function genreAction()
@@ -67,6 +95,8 @@ class DefaultController extends Controller
             array('movies' => $movies)
        );
 	}
+	
+	
 	
 	/**
      * @Route("/popularne", name="popularne")

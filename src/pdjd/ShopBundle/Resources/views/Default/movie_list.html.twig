@@ -5,14 +5,14 @@
 <div class="lista">
 {% if movies | length == 0 %}
 
-        Brak filmów. B³¹d
+        <p>Brak filmow o okreslonych kryteriach.</p>
 
 {% else %}
 	<table border="1">
     {% for movie in movies %}
         <tr>
 			<td>
-			    <a style="color:inherit" href="blank">{{ movie.name }}</a>
+			    <a style="color:inherit" href="{{path('film2')}}/{{movie.id}}">{{ movie.name }}</a>
 			</td>
 			<td>
 				<a href="{{ movie.cover }}"><img class="img-shadow" src="{{ movie.cover }}" style="width: 50%"  onerror="this.style.display='none'"/></a>
