@@ -21,9 +21,20 @@
 				Gatunek: {{ movie.genre }}</br>
 
 				Popularnosc: {{ movie.ordersCount }}</p>
-
+				<a href="{{path('movie_review')}}/{{movie.id}}">Dodaj recenczje</a>
     {% endfor %}
 
 {% endif %}
 </div>
+
+</br>
+{% for r in review %}	
+						
+Tytuł: <b>{{ r.title }}</b></br>
+Użytkownik: {{ r.user }}</br>
+Data: {{ r.date }}</br>
+Treść: {{ r.description}}</br>
+</br></br> 
+	{% endfor %}		
+ <a href="{{path('movie_review')}}/{{movie.id}}">Dodaj recenczje</a>
 {% endblock body%}
