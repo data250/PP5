@@ -1,0 +1,32 @@
+{% extends 'default/index.html.twig' %}
+{% block body %}
+
+<p>Dodaj recenzjê do: {{ movie.title }}</p>
+  
+							{{ form_start(form , { 'attr': {'class': 'sky-form'} }) }}
+                                    <fieldset>
+                                        <section>
+                                            <label for="file" class="input">
+
+										{{ form_widget(form.title, {'attr': {'placeholder': 'Tytu³'}}) }}
+                                            </label>
+                                        </section>
+                                        
+                                        <section>
+                                            <label class="textarea">
+                                        {{ form_widget(form.description, { 'attr': {'placeholder': 'Treœæ recenzji', 'rows': '15'} }) }}
+                                            </label>
+                                        </section>
+                                        <section>
+                                            <div class="row">
+                                               <div class="col-md-4">
+                                                    <button  type="submit">
+                                                        <span>Zapisz</span>
+                                                    </button>
+                                                </div>
+                                        </section>
+                                    </fieldset>
+								{{ form_end(form) }}
+
+
+{% endblock %}
